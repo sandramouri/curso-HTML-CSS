@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listas mixtas</title>
+</head>
+<body>
+  
+  <!-- h1+main>ol>li*2+ul>li*3^li -->
+  
+  <h1>Listas mixtas en HTML</h1>
+  <main>
+    <h2>Lista de la compra anidada mixta</h2>
+    <ol>
+      <li>Jamón York</li>
+      <li>Queso</li>
+      <ul>
+        <li>Gouda</li>
+        <li>Edam</li>
+        <li>Manchego</li>
+      </ul>
+      <li>Chorizo</li>
+    </ol>
+
+    <p>Código:</p>
+    <pre>
+      &lt;ol>
+        &lt;li><&lt;li>
+        &lt;li><&lt;li>
+        &lt;ul>
+          &lt;li><&lt;li>
+          &lt;li><&lt;li>
+          &lt;li><&lt;li>
+          &lt;/ul>
+        &lt;li><&lt;li>
+        &lt;/ol>
+    </pre>
+
+    <h2>Lista de la compra anidada ordenada</h2>
+    <ol>
+      <li>Jamón York</li>
+      <li>Queso</li>
+      <ol>
+        <li>Gouda</li>
+        <li>Edam</li>
+        <li>Manchego</li>
+      </ol>
+      <li>Chorizo</li>
+    </ol>
+
+    <h2>Lista de la compra anidada no ordenada</h2>
+    <ul>
+      <li>Jamón York</li>
+      <li>Queso</li>
+      <ul>
+        <li>Gouda</li>
+        <li>Edam</li>
+        <li>Manchego</li>
+      </ul>
+      <li>Chorizo</li>
+    </ul>
+  </main>
+</body>
+</html>
