@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario - Básico 3</title>
+</head>
+<body>
+
+  <h1>Formularios</h1>
+
+  <h2>Formulario básico 3</h2>
+
+    <form action="https://dle.rae.es/" method="get" target="_blank">
+      <p>Preferencias de ropa:</p>
+      <label for="camisa">
+        <input id="camisa" type="checkbox" name="ropa" checked value="camisa">Camisa
+      </label>
+
+      <label for="blusa">
+        <input id="blusa" type="checkbox" name="ropa" value="blusa">Blusa
+      </label>
+
+      <label for="camiseta">
+        <input id="camiseta" type="checkbox" name="ropa" value="camiseta">Camiseta
+      </label><br>
+
+      <label for="pantalon">
+        <input id="pantalon" type="checkbox" name="ropa" value="pantalon">Pantalón
+      </label>
+
+      <label for="falda">
+        <input id="falda" type="checkbox" name="ropa" value="falda">Falda
+      </label><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <h3>&lt;input></h3>
+
+    <h4>Atributos &lt;input></h4>
+
+    <ul>
+      <li>
+        <pre>type="checkbox"</pre>
+        <p>Tipo  de control a mostrar, en este caso una casilla(para elegir una o múltiples opciones)</p>
+      </li>
+
+      <li>
+        <pre>checked</pre>
+        <p>El inpput que posee este atributo se visualiza seleccionado por defecto</p>
+      </li>
+    </ul>
+</body>
+</html>

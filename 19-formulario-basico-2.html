@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario - Básico 2</title>
+</head>
+<body>
+  <h1>Formularios</h1>
+  <h2>Formulario básico 2</h2>
+    <form action="https://dle.rae.es/" method="get" target="_blank">
+      Sexo:
+      <label for="hombre">
+        <input id="hombre" type="radio" name="sexo" value="h">Hombre
+      </label>
+
+      <label for="mujer">
+        <input id="mujer" type="radio" name="sexo" value="m">Mujer
+      </label>
+
+      <label for="otro">
+        <input id="otro" type="radio" name="sexo" value="o">Otro
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <h3>&lt;label></h3>
+
+    <p>El Elemento HTML &lt;label> <u>representa una etiqueta para un elemento en una interfaz de usuario.</u></p>
+
+    <p>Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label.</p>
+
+    <h4>Atributos &lt;lab</h4>
+
+    <ul>
+      <li>
+        <pre>for</pre> 
+        <p>El ID del elemento de formulario etiquetable relacionado en el mismo documento que el elemento label.</p> 
+
+        <p>En nuestro caso observa que el id del primer input es "hombre" y ese mismo valor es el que se va a utilizar para el atributo for en label.</p>
+
+        <p>Podríamos decir: asigna una etiqueta para el id=XYZ</p>
+        
+        <p>El primer elemento en el documento con tal ID que coincida con el dispuesto en el atributo for será el control etiquetado para este elemento.</p>
+      </li>
+    </ul>
+
+    <h3>&lt;input></h3>
+
+    <h4>Atributos &lt;input></h4>
+
+    <ul>
+      <li>
+        <pre>id</pre>
+        <p>Identificador único</p>
+      </li>
+      <li>
+        <pre>type="radio"</pre>
+        <p>Tipo  de control a mostrar, en este caso un radio button (para elegir una sola opción)</p>
+      </li>
+      <li>
+        <pre>name="sexo"</pre>
+        <p>Nombre para agrupar los distintos botones del formulario que pertenecen a un mismo grupo/categoría/conjunto</p>
+
+        <p>Observa en nuestro formulario que los tres botones poseen este atributo idénticamente, reflejando así que cualquiera de estos inputs pertenecen a una misma categoría</p>
+      </li>
+      <li>
+        <pre>value="ABC"</pre>
+        <p>Valor que recibirá el servidor cuando se seleccione el input</p>
+
+        <p>En este ejemplo el servidor recibirá el string "ABC" si este input ha sido seleccionado por el usuario</p>
+      </li>
+    </ul>
+</body>
+</html>
