@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;footer></title>
+</head>
+<body>
+
+  <h1>&lt;footer> en HTML</h1>
+
+  <main>
+    <p>El elemento HTML &lt;footer> representa un pie de página para el contenido de la <u>sección ancestral más cercana</u> o al <u>>elemento raíz.</u></p>
+
+    <p>Un elemento &lt;footer> generalmente contiene información sobre el autor del artículo, sección y/o página, datos de derechos de autor o enlaces a documentos relacionados.</p>
+
+    <p>Cuando nos referimos a <strong>sección ancestral más cercana</strong> nos estamos refiriendo a la sección de jerarquía superior a la sección actual (padre)</p>
+
+    <p>En el siguiente ejemplo la sección ancestral más cercana (padre) a &lt;footer> es &lt;html>:</p>
+    <pre>
+      &lt;!DOCTYPE html>
+      &lt;html lang="en">
+        &lt;head>
+          &lt;meta charset="UTF-8">
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+          &lt;title>Document&lt;/title>
+        &lt;/head>
+
+        &lt;body>
+          Cuerpo del documento  
+        &lt;/body>
+        
+        &lt;footer>
+          &lt;small>Pié de página&lt;/small>
+        &lt;/footer>
+      &lt;/html>
+    </pre>
+
+
+    <p>En el siguiente ejemplo la sección ancestral más cercana (padre) a &lt;footer> es &lt;article>:</p>
+
+    <pre>
+      &lt;!DOCTYPE html>
+      &lt;html lang="en">
+      &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+        &lt;title>Document&lt;/title>
+      &lt;/head>
+      &lt;body>
+
+        &lt;main>
+          &lt;section>
+            &lt;article>
+              &lt;header>
+                Encabezado del artículo
+              &lt;/header>
+
+              texto del artículo texto del artículo texto del artículo texto del artículo
+              texto del artículo texto del artículo texto del artículo texto del artículo
+              texto del artículo texto del artículo texto del artículo texto del artículo
+              
+
+              &lt;footer>
+                &lt;small>Pié de página del artículo&lt;/small>
+              &lt;/footer>
+            &lt;/article>
+          &lt;/section>
+        &lt;/main>
+        
+      &lt;/body>
+      &lt;/html>
+    </pre>
+
+    <p>Habitualmente al texto que se muestra en &lt;footer> se le aplica la etiqueta &lt;small>...&lt;/small></p>
+  </main>
+  
+</body>
+</html>
