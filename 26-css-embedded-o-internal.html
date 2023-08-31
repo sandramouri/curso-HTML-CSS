@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS internal/embedded</title>
+
+  <style>
+    /* Reglas */
+    header {
+      color: green;
+      font-size: 25px;
+    }
+
+    small {
+      color: brown;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    p {
+      color: darkslategray;
+      font-style: italic;
+
+    }
+
+    hr {
+      border: 3px dashed red;
+    }
+
+    /* hr{
+      border-top: 3px solid red;
+    } */
+
+    /* hr{
+      border-top: 3px dashed red;
+    } */
+
+    /* hr{
+      border-top: 3px dotted red;
+    } */
+  </style>
+</head>
+
+<body>
+  <h1>CSS Internal/Embedded StyleSheets</h1>
+
+  <p>El CSS interno o embebido es el que se especifica en un bloque &lt;style> dentro de &lt;head></p>
+  <main>
+    <header>
+      Encabezado de la sección main
+    </header>
+
+    <p>texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto
+      texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto
+      texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto
+      texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto
+      texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto
+      texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto
+      texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto</p>
+
+    <p style="color: black; font-weight: bold;">texto con estilo sobreescrito por un CSS inline</p>
+    <footer>
+      <hr>
+      <small>Realizado por nosotros, aquí, en este curso, este año</small>
+    </footer>
+    <P>Código</P>
+    <pre>
+      &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+        &lt;title>CSS internal/embedded&lt;/title>
+      
+        &lt;style>
+          /* Reglas */
+          header {
+            color: green;
+            font-size: 25px;
+          }
+      
+          small{
+            color: brown;
+            font-weight: bold;
+          }
+          
+          footer {
+            text-align: center;
+          }
+          
+          p {color: darkslategray;
+            font-style: italic;
+            
+          }
+          ...
+      
+          hr {
+            border-top: 3px solid red;
+          }
+          ...
+      
+        &lt;/style>
+      &lt;/head>
+      &lt;body>
+      &lt;h1>CSS Internal/Embedded StyleSheets&lt;/h1>
+
+      &lt;p>El CSS interno o embebido es el que se especifica en un bloque &lt;style> dentro de &lt;head>&lt;/p>
+      &lt;main>
+        &lt;header>
+          Encabezado de la sección main
+        &lt;/header>
+
+        &lt;p>texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto 
+        texto texto texto texto texto texto texto texto texto texto &lt;/p>
+
+        &lt;p style="color: black; font-weight: bold;">texto con estilo sobreescrito por un CSS inline&lt;/p>
+        &lt;footer>
+          &lt;hr>
+          &lt;small>Realizado por nosotros, aquí, en este curso, este año&lt;/small>
+        &lt;/footer>
+        &lt;P>Código&lt;/P>
+        &lt;pre>
+          ...
+        &lt;/pre>
+
+    </pre>
+  </main>
+</body>
+
+</html>
