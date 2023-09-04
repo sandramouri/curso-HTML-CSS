@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>font-family: fuentes externas</title>
+  <link rel="stylesheet" href="assets/css/fonts-family-external.css" type="text/css">
+</head>
+<body>
+  <h1>font-family: fuentes externas</h1>
+  <p>fuentes de letra aplicadas desde una web externa o descargada</p>
+
+<pre>
+  --- CSS
+
+  @font-face {
+    font-family: 'pacifico';
+    src: url(/assets/fonts/pacifico/Pacifico-Regular.ttf) format('truetype');
+  }
+  
+  .handwriting-pacifico-greenyellow {
+    font-family: pacifico;
+    font-size: 20px;
+    color: greenyellow;
+    background-color: black;
+  }
+  
+  .handwriting-pacifico-white {
+    font-family: pacifico;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+  }
+
+
+  --- HTML
+
+  &lt;p style="font-family: pacifico;">Aplicado css inline&lt;/p>
+
+  &lt;p class="handwriting-pacifico-greenyellow">Aplicado desde CSS externo a la etiqueta &lt;p>&lt;/p>
+  
+  &lt;p>&lt;span class="handwriting-pacifico-white">Aplicado desde CSS externo a la etiqueta &lt;span>&lt;/span>&lt;/p>
+</pre>
+
+  <p style="font-family: pacifico;">Aplicado css inline</p>
+
+  <p class="handwriting-pacifico-greenyellow">Aplicado desde CSS externo a la etiqueta &lt;p></p>
+  
+  <p><span class="handwriting-pacifico-white">Aplicado desde CSS externo a la etiqueta &lt;span></span></p>
+</body>
+</html>

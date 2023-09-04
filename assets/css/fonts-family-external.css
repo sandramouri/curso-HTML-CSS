@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'pacifico';
+  src: url(/assets/fonts/pacifico/Pacifico-Regular.ttf) format('truetype');
+}
+
+.handwriting-pacifico-greenyellow {
+  font-family: pacifico;
+  font-size: 20px;
+  color: greenyellow;
+  background-color: black;
+}
+
+.handwriting-pacifico-white {
+  font-family: pacifico;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+}
