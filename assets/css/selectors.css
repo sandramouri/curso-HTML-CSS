@@ -1,0 +1,73 @@
+
+/* selector universal */
+* {
+  font-style: italic;
+}
+
+
+/* selector de tipo */
+h2 {
+  font-style: normal;
+  color: darkgreen;
+}
+
+
+h3 {
+  font-style: normal;
+  color: crimson;
+}
+
+/* selector de clase */
+.listas {
+  font-style: normal;
+  color: blue;
+}
+
+.texto-marron {
+  color: sienna;
+}
+
+.fondo-negro {
+  background-color: black;
+}
+
+/* selector de id */
+#tit3 {
+  color:slateblue;
+}
+
+/* selector de atributo */
+/* dirección web que comience por http... */
+a[href^="http"] { 
+  color: fuchsia;
+  background-color: black;
+}
+
+/* dirección web que finalice por .org */
+a[href$=".org"] { 
+  color: white;
+  background-color: blue;
+}
+
+/* dirección web que contenga ...goog... */
+a[href*="joog"] { 
+  color: black;
+  background-color: yellow;
+}
+
+p[me_lo_he_inventado] {
+  color:blueviolet
+}
+
+p[me_lo_he_inventado="True"] {
+  color:green
+}
+
+p[me_lo_he_inventado="False"] {
+  color:red
+}
+
+/* selecciona TODOS los atributos mi_attr */
+[mi_attr] {
+  background-color: lightseagreen;
+}

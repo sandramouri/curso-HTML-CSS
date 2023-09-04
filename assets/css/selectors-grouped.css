@@ -1,0 +1,22 @@
+h1,
+h2,
+h3{
+  color: blue;
+}
+
+ol,
+ul {
+  font-style: italic;
+}
+
+.texto-blue {
+  color: blue;
+}
+
+.texto-red {
+  color: red;
+}
+
+.texto-green {
+  color: green;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/selectors-grouped.css" type="text/css">
+  <title>Selectores agrupados</title>
+</head>
+<body>
+  <h1>Selectores agrupados en CSS</h1>
+
+  <p>Utilizamos selectores agrupados cuando queremos aplicar un estilo en particular a más de un selector</p>
+
+  <pre>
+    --- CSS
+    h1,
+h2,
+h3{
+  color: blue;
+}
+
+ol,
+ul {
+  font-style: italic;
+}
+
+.texto-blue {
+  color: blue;
+}
+
+.texto-red {
+  color: red;
+}
+
+.texto-green {
+  color: green;
+}
+    --- HTML
+    &lt;h2>Título H2&lt;/h2>
+    &lt;h3>Título H3&lt;/h3>
+    &lt;ol class="texto-green">
+      &lt;li>Pan&lt;/li>
+      &lt;li>queso&lt;/li>
+    &lt;/ol>
+    &lt;ul>
+      &lt;li>Vino tinto&lt;/li>
+      &lt;li>Vino blanco&lt;/li>
+    &lt;/ul>
+  </pre>
+
+  <h2>Título H2</h2>
+  <h3>Título H3</h3>
+  <ol class="texto-green">
+    <li>Pan</li>
+    <li>queso</li>
+  </ol>
+  <ul>
+    <li>Vino tinto</li>
+    <li>Vino blanco</li>
+  </ul>
+</body>
+</html>
