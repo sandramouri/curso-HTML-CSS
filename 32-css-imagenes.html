@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/images.css" type="text/css">
+  <title>Imágenes</title>
+
+  <pre>
+    --- CSS
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .cerebro{
+      width: 250px;
+      height: auto;
+      border-width: 25px;
+      border-style: groove;
+      border-color: gold
+    }
+    
+    .ai-uniforme{
+      border-width: 25px;
+      border-color: blue;
+      border-style: dotted;
+    }
+    
+    .ai-variopinto{
+      border-width: 25px;
+      border-top-color: red;
+      border-left-color: yellow;
+      border-right-color: green ;
+      border-bottom-color: purple;
+      border-style: double dashed dotted solid; 
+    }
+    /*NOTA: border-style se aplicará empezando 
+            por top y e sentido de las agujas
+            del reloj*/
+    
+    .monos{
+      width: auto; /*auto:  Establece el tamaño de la dimensión
+                            manteniendo la proporción de la imagen
+                            original una vez especificado el nuevo 
+                            tamaño en la nueva dimensión */
+      height: 150px;
+      border-width: 20px;
+      border-style: double;
+      border-color: green  
+    }
+  </pre>
+</head>
+<body>
+  <h1>Imágenes en CSS</h1>
+  <p>¿Cómo hemos pasado de esto?</p>
+  <img class="cerebro" src="assets/img/imagenes-varias/ai6.jpg" alt="cerebro micro-desarrollado">
+
+  <p>¿a esto?</p>
+  <img class="ai-uniforme" src="assets/img/imagenes-varias/ai2.jpg" alt="inteligencia artificial"> 
+  
+  <p></p>
+
+  <img class="ai-variopinto" src="assets/img/imagenes-varias/ai4.jpg" alt="inteligencia artificial">
+
+  <p>Nosotros no lo sabemos</p>
+
+  <img class="monos" src="assets/img/imagenes-varias/ai7.jpg" alt="el mono">
+  
+</body>
+</html>
