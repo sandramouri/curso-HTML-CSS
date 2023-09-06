@@ -1,0 +1,33 @@
+img{
+  width: 400px;
+  height: auto;
+}
+
+.border-round-20px{
+  border-radius: 20px;
+}
+
+
+.border-round-50px{
+  border-radius: 50px;
+}
+
+.border-round-100px{
+  border-radius: 100px;
+}
+
+.border-round-150px{
+  border-radius: 150px;
+}
+
+.border-round-200px{
+  border-radius: 200px;
+}
+
+.border-round-25percent{
+  border-radius: 25%;
+}
+
+.pentagon{
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}

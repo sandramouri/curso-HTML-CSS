@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/images-rounded-borders.css" type="text/css">
+  <title>Imagen con bordes redondeados</title>
+</head>
+<body>
+  <h1>Imagen con bordes redondeados</h1>
+
+  <h2>Borde redondeado 20 px</h2>
+
+  <pre>
+    --- CSS
+    
+    img{
+      width: 400px;
+      height: auto;
+    }
+
+    .border-round-100px{
+      border-radius: 100px;
+    }
+
+    .border-round-25percent{
+      border-radius: 25%;
+    }
+    
+    .pentagon{
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    }
+  </pre>
+
+  <img class="border-round-20px" src="assets/img/imagenes-varias/chaplin/chaplin.webp" alt="Charles Chaplin">
+  
+  <h2>Borde redondeado 50 px</h2>
+
+  <img class="border-round-50px" src="assets/img/imagenes-varias/chaplin/chaplin.webp" alt="Charles Chaplin">
+  
+  <p></p>
+
+  <h2>Borde redondeado 100 px</h2>
+
+  <img class="border-round-100px" src="assets/img/imagenes-varias/chaplin/chaplin.webp" alt="Charles Chaplin">
+  
+  <p></p>
+
+  <h2>Borde redondeado 150 px</h2>
+
+  <img class="border-round-150px" src="assets/img/imagenes-varias/chaplin/chaplin.webp" alt="Charles Chaplin">
+  
+  <p></p>
+
+  <h2>Borde redondeado 200 px</h2>
+
+
+  <p><strong>NOTA</strong>La geometría de la imagen (en este caso rectángulo) imposibilita visualizar una imagen redonda</p>
+
+  <p><strong>Opciones:</strong></p>
+  <ol>
+    <li>Redimensionar la imagen con un software de tratamiento de imágenes</li>
+    <li>Redimensionar la imagen mediante CSS</li>
+  </ol>
+
+
+  <h3>Imagen rectangular</h3>
+  <img class="border-round-200px" src="assets/img/imagenes-varias/chaplin/chaplin.webp" alt="Charles Chaplin">
+  
+  <p></p>
+
+
+  <h3>Imagen cuadrada</h3>
+  <img class="border-round-200px" src="assets/img/imagenes-varias/chaplin/chaplin_cuadrada.webp" alt="Charles Chaplin">
+  
+  <p></p>
+
+  <h2>Borde redondeado 25%</h2>
+  <img class="border-round-25percent" src="assets/img/imagenes-varias/chaplin/chaplin_cuadrada.webp" alt="Charles Chaplin">
+  
+  <p></p>
+
+  <h2>Pentágono</h2>
+  <img class="pentagon" src="assets/img/imagenes-varias/chaplin/chaplin_cuadrada.webp" alt="Charles Chaplin">
+  
+  
+  <p></p>
+</body>
+</html>
