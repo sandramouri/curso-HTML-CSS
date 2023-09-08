@@ -1,0 +1,27 @@
+div {
+  background-color: crimson;
+}
+
+img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: yellow;
+
+  width: 400px;
+  height: 300px;
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+}
+
+#margin-nagetive {
+  margin-bottom: -35px;
+  margin-left: -75px;
+}
