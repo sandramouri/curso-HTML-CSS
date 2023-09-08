@@ -1,0 +1,62 @@
+.panel{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bgcolor-blue{
+  background-color: #063971;
+}
+
+.bgcolor-yellow{
+  background-color: #FFc300;
+}
+
+.bgcolor-white{
+  background-color: white;
+}
+
+.border-red{
+  border: 15px solid;
+  border-color: red;
+}
+
+.text-white{
+  color: white;
+}
+
+/*estilos por ID*/
+
+#psyco-div{
+  background-color: burlywood;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-weight: bold;
+}
+
+#psyco-green{
+  background-color: #a3f307;
+}
+
+#psyco-aqua{
+  background-color: #05f9e2;
+}
+
+#psyco-green-lemon{
+  background-color: #e2f705;
+}
+
+#psyco-fuchsia{
+  background-color: #f50b86;
+}
+
+#psyco-orange{
+  background-color: #ff6f00;
+}
+
+.width-80percent{
+  width: 80%;
+}
