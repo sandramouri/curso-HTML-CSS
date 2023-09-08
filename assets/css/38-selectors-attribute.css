@@ -1,0 +1,20 @@
+div[mybool="True"] {
+  color: blue;
+}
+
+p[mybool="True"] {
+  color: green;
+}
+
+p[mybool="False"] {
+  color: red;
+}
+
+strong[att] {
+  color: darkviolet;
+}
+
+pre[pre] {
+  background-color: lightgrey;
+  padding: 15px;
+}

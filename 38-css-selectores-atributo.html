@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/38-selectors-attribute.css" type="text/css">
+  <title>Selectores de atributos</title>
+</head>
+<body>
+  <h1>Selectores de atributos en CSS</h1>
+
+  <ol>
+    <li>
+      <p><strong att>[attr]</strong>: Este selector selecciona todos los elementos HTML que tienen un atributo específico, independientemente de su valor. Es útil cuando deseas aplicar un estilo o una regla a todos los elementos que tengan ese atributo, sin importar qué valor tengan.</p>
+    </li>
+  
+    <pre pre>
+    [data-toggle] {
+      color: blue;
+  }  
+    </pre>
+    <p><strong>Situación real</strong>: Puedes utilizar este selector para aplicar un estilo a todos los elementos de un formulario que tienen el atributo required. Esto te permite destacar los campos obligatorios en un formulario web para que los usuarios sepan que deben completarlos.</p>
+
+    <li>
+      <p><strong att>[attr=val]</strong>: Este selector selecciona todos los elementos HTML que tienen un atributo específico con un valor específico. Es útil cuando deseas aplicar un estilo o una regla solo a los elementos que coinciden exactamente con ese valor de atributo.</p>
+    </li>
+  
+    <pre pre>
+      [href="https://www.ejemplo.com"] {
+        text-decoration: underline;
+    }    
+    </pre>
+    <p><strong>Situación real</strong>: Cuando estás creando una página de inicio con enlaces a redes sociales, puedes usar este selector para aplicar un estilo específico solo a los enlaces que dirigen a Facebook.</p>
+
+    <li>
+      <p><strong att>[attr~=val]</strong>: Este selector selecciona todos los elementos HTML que tienen un atributo específico donde el valor coincide con una palabra clave específica dentro de una lista separada por espacios. Es útil cuando deseas aplicar un estilo o una regla a elementos que tengan una palabra clave particular en su atributo.</p>
+    </li>
+  
+    <pre pre>
+      --- CSS
+      .etiquetas[data-color~="Rojo"] {
+        color: red;
+    }
+
+    ---HTML
+    &lt;div class="etiquetas">Rojo Azul Verde&lt;/div>
+    </pre>
+    <p><strong>Situación real</strong>: Supongamos que tienes un sitio web que muestra artículos y cada artículo tiene etiquetas separadas por espacios en un atributo data-tags. Puedes usar este selector para aplicar estilos diferentes a los artículos que tengan una etiqueta específica.</p>
+
+    <li>
+      <p><strong att>[attr|=val]</strong>: Este selector selecciona todos los elementos HTML que tienen un atributo específico con un valor que comienza exactamente con el valor especificado, seguido de un guion medio ("-"). Es útil cuando deseas seleccionar elementos que tienen un valor de atributo específico con un prefijo determinado.</p>
+    </li>
+  
+    <pre pre>
+      --- CSS
+      input[id|="lang"] {
+        border: 1px solid gray;
+    }
+
+    ---HTML
+    &lt;input id="lang-es" type="text" />
+    &lt;input id="lang-en" type="text" />
+    &lt;input id="lang-fr" type="text" />
+
+    </pre>
+    <p><strong>Situación real</strong>: Supongamos que estás desarrollando un sitio web multilingüe y quieres aplicar estilos específicos a elementos con atributos lang que comienzan con un código de idioma en particular.</p>
+  </ol>
+  <h2>Ejemplo:</h2>
+  <div mybool="True">
+    <p mybool="True">Había una vez en un pequeño pueblo rodeado de exuberantes bosques, un anciano llamado Don Manuel. Don Manuel vivía en una modesta casa de madera en lo profundo del bosque, donde pasaba sus días cuidando de un hermoso jardín de rosas. Sus rosales eran famosos en todo el lugar por su belleza y fragancia, y la gente viajaba desde lejos para contemplarlos.</p>
+
+    <p mybool="False">Un día, una joven llamada Isabella llegó al pueblo en busca de refugio. Estaba perdida y cansada, y encontró la casa de Don Manuel mientras exploraba el bosque. Al ver el jardín de rosas, quedó maravillada por su belleza y decidió pedir ayuda a Don Manuel. Él la recibió con amabilidad y la invitó a quedarse en su casa hasta que encontrara su camino de regreso.</p>
+
+    <p mybool="True">Con el paso de los días, Don Manuel y Isabella se hicieron amigos. Ella lo ayudaba en el jardín de rosas, y él le contaba historias de su juventud. A medida que pasaba el tiempo, el jardín de rosas parecía florecer aún más, como si las flores estuvieran agradecidas por la compañía de Isabella.</p>
+
+    <p mybool="False">Finalmente, Isabella encontró el camino de regreso a su casa, pero decidió quedarse en el pueblo y seguir ayudando a Don Manuel con su jardín de rosas. Juntos, compartieron la belleza de las flores y la amistad, demostrando que a veces, en los lugares más inesperados, se pueden encontrar los tesoros más preciosos.</p>
+    
+    <p mybool="Eu-non-sei">Los años pasaron, y la amistad entre Don Manuel y Isabella se convirtió en un lazo aún más profundo. El jardín de rosas continuó siendo el orgullo del pueblo, y su fragancia se extendió por toda la región. La gente decía que las rosas de Don Manuel y la sonrisa de Isabella iluminaban el lugar.</p>
+  </div>
+  
+</body>
+</html>
