@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/41-prioridad-css.css" type "text/css">
+  <title>Prioridades en CSS</title>
+</head>
+<body>
+
+  <h1>Prioridades en CSS</h1>
+
+  <h2>Selectores del mismo tipo con propiedades en conflicto</h2>  
+  <p>La aplicación de CSS dependerá del orden en el archivo .css</p>
+
+  <p>Normalmente el último selector involucrado en aparecer en el .css será el aplicado</p>
+
+  <pre>
+    ---CSS
+    .fondo-gris {
+      background-color: grey;
+     }
+     
+     .fondo-amarillo {
+       background-color: yellow;
+     }
+
+     --- HTML
+     &lt;div class="fondo-gris fondo-amarillo">
+     &lt;p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum quidem deleniti alias esse eaque inventore natus, quam ea beatae deserunt fugit aliquam repudiandae tenetur. Veritatis vero consequatur modi excepturi?&lt;/p>
+     &lt;/div>
+  </pre>
+
+  <div class="fondo-gris fondo-amarillo">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum quidem deleniti alias esse eaque inventore natus, quam ea beatae deserunt fugit aliquam repudiandae tenetur. Veritatis vero consequatur modi excepturi?</p>
+  </div>
+    
+  <h2>Selector de tipo vs selector de clase</h2>
+
+  <p>Al ser el selector de clase más específico que el selector de tipo, se aplicará el estilo de la clase</p>
+
+  <pre>
+    ---CSS
+    div {
+      color: blue;
+    }
+    
+    p {
+      color: black;
+    }
+    
+    .texto-verde {
+      color: green;
+    }
+
+    --- HTML
+    &lt;div>
+    &lt;p class="texto-verde">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum quidem deleniti alias esse eaque inventore natus, quam ea beatae deserunt fugit aliquam repudiandae tenetur. Veritatis vero consequatur modi excepturi?&lt;/p>
+    &lt;/div>
+
+  </pre>
+
+  <div>
+    <p class="texto-verde">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum quidem deleniti alias esse eaque inventore natus, quam ea beatae deserunt fugit aliquam repudiandae tenetur. Veritatis vero consequatur modi excepturi?</p>
+  </div>
+
+
+
+  <h2>Selector de ID vs selector de clase</h2>
+  <p>Al ser el selector de ID más específico que el selector de clase, se aplicará el estilo del ID</p>
+  
+  <hr>
+  <p><strong>NOTA:</strong></p>
+  <p>Es posible que se defina un selector de clase y un selector de ID con el mismo nombre</p>. 
+  
+  <pre>
+    .fondo-gris {
+      background-color: grey;
+     }
+     
+     ...
+
+     #fondo-gris {
+       background-color: grey;
+     }
+  </pre>
+  <p>No es muy recomendable seguir esta práctica!</p>
+  <hr>
+
+  <pre>
+    --- CSS
+    .fondo-amarillo {
+      background-color: yellow;
+    }
+    
+    #bg-pink {
+      background-color: pink;
+    }
+
+    --- HTML
+    &lt;div>
+    &lt;p id="bg-pink"" class="fondo-amarillo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum quidem deleniti alias esse eaque inventore natus, quam ea beatae deserunt fugit aliquam repudiandae tenetur. Veritatis vero consequatur modi excepturi?&lt;/p>
+    &lt;/div>
+
+  </pre>
+
+  <div>
+    <p id="bg-pink"" class="fondo-amarillo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum quidem deleniti alias esse eaque inventore natus, quam ea beatae deserunt fugit aliquam repudiandae tenetur. Veritatis vero consequatur modi excepturi?</p>
+  </div>
+
+  <h2>Selector de ID vs selector de clase vs selector de atributo</h2>
+
+  <p>Se aplicará el estilo de ID por su prioridad sobre la clase y el atributo</p>
+
+  <pre>
+    --- CSS
+    #google {
+     color:  crimson;
+    
+    }
+  
+    .texto-azul{
+     color: blue
+    }
+  
+    [target="_blank"]{
+     color: blueviolet;
+    }
+
+    --- HTML
+    &lt;div>
+      &lt;a id="google" class="texto-azul" href="http://google.com" target="_blank">Google&lt;/a>
+    &lt;/div>
+  </pre>
+
+  <div>
+    <a id="google" class="texto-azul" href="http://google.com" target="_blank">Google</a>
+  </div>
+  
+</body>
+</html>

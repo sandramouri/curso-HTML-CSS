@@ -1,0 +1,53 @@
+pre{
+  background-color: lightgrey;
+}
+
+/* Selectores del mismo tipo con propiedades en conflicto */
+.fondo-gris {
+  background-color: grey;
+ }
+ 
+ .fondo-amarillo {
+   background-color: yellow;
+ }
+ 
+ /* Selector de tipo vs selector de clase */
+ 
+ div {
+   color: blue;
+ }
+ 
+ p {
+   color: black;
+ }
+ 
+ .texto-verde {
+   color: green;
+ }
+ 
+ 
+ /* Selector de ID vs selector de clase */
+ 
+ /* ya definido anteriormente
+ .fondo-amarillo {
+   background-color: yellow;
+ }
+ */
+ 
+ #bg-pink {
+   background-color: pink;
+ }
+ /* Selector de ID vs selector de clase vs selector de atributo */
+
+ #google {
+  color:  crimson;
+
+ }
+
+ .texto-azul{
+  color: blue
+ }
+
+ [target="_blank"]{
+  color: blueviolet;
+ }
