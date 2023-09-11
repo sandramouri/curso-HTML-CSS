@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/39-unidades-absolutas-y-relativas.css">
+  <title>Unidades absolutas y relativas</title>
+</head>
+<body>
+  <h1> Unidades absolutas y relativas</h1>
+
+  <!-- El atributo inventado por ti "e-name" no requiere un valor, sin embargo es recomendable asignar alguno, p.e.: true o false -->
+
+  <p e-name="true">Párrafo en &lt;html> con fuente y tamaño predeterminado del navegador</p>
+
+  <p e-name="true" class="courier">Párrafo en &lt;html> con fuente Courier New y tamaño predeterminado del navegador</p>
+
+  <p e-name="true" class="em2" >Párrafo en &lt;html> con fuente y tamaño 2em</p>
+  <hr>
+  <div class="courier">
+    <p>Párrafo en &lt;div> con Cournier New 20</p>
+    <p class="em2">Párrafo en &lt;div> con Cournier New 2em</p>
+    <hr>
+
+    <ul>
+      <li>Uno con tamaño y letra de &lt;ul> 10px</li>
+      <li class="em2">Dos -> con tamaño 2em, es decir, dos veces el tamaño del contenedor, en este caso,&lt;ul> 10px * 2 = 20px </li>
+      <li e-name="true" class="rem2" >Tres -> con tamaño 2rem, es decir, dos veces el tamaño del elemento raíz, en este caso,&lt;html>
+
+        <p>Observa que el tamaño SI es el doble del tamaño del elemento raíz</p>
+      
+    
+      </li>
+    </ul>
+    <p e-name="true" class="border3"> Todos los elementos mostrados con este estilo son relativos a la etiqueta &lt;html> y consecuentemente con el tamaño predeterminado de ese contenedor raíz(Root)</p>
+  </div>
+  
+</body>
+</html>
