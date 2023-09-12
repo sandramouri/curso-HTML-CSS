@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    ol {
+      color: green !important;
+    }
+  </style>
+
+  <link rel="stylesheet" href="assets/css/43-prioridad-css-3.css" type="text/css">
+  
+  <title>Prioridades en CSS</title>
+</head>
+<body>
+
+  <h1>Prioridades en CSS</h1>
+  
+  <p>Para evitar conflictos y forzar el uso de una propiedad de un selector usar <strong>!important</strong> en la propiedad</p>
+
+  <pre>
+    --- CSS
+
+    CSS interno:
+
+    &lt;head>
+      &lt;style>
+        ol {
+          color: green !important;
+        }
+      &lt;/style>
+
+      &lt;link rel="stylesheet" href="assets/css/43-prioridad-css-3.css" type="text/css">
+    &lt;/head>
+
+    CSS externo:
+
+    ul {
+      color: purple !important;
+    }
+    
+    --- HTML
+    &lt;ol style="color: blue;">
+      &lt;li>Primero&lt;/li>
+      &lt;li>Segundo&lt;/li>
+      &lt;li>Tercero&lt;/li>
+    &lt;/ol>
+
+    &lt;ul style="color: blue;">
+      &lt;li>Uno&lt;/li>
+      &lt;li>Dos&lt;/li>
+      &lt;li>Tres&lt;/li>
+    &lt;/ol>
+  </pre>
+
+  <div>
+    <ol style="color: blue;">
+      <li>Primero</li>
+      <li>Segundo</li>
+      <li>Tercero</li>
+    </ol>
+    <br>
+
+    <ul style="color: blue;">
+      <li>Uno</li>
+      <li>Dos</li>
+      <li>Tres</li>
+    </ol>
+    <br>
+
+
+  </div>
+</body>
+</html>
