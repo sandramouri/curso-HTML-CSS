@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/45-variables.css">
+  <title>Variables</title>
+</head>
+<body>
+  <h1>Variables en CSS</h1>
+  <p>Se definen con dos guiones <strong>--</strong>nombre-de-la-variable</p>
+
+  <p>Se usan:</p>
+  <pre>
+    tipo-selector {
+      propiedad: var(--nombre-de-la-variable)
+    }
+  </pre>
+
+  <h2>Variables globales</h2>
+  <p>Pueden ser usadas en cualquier lugar de la página</p>
+
+  <p>Se definen del selector <strong>:root</strong></p>
+
+  <pre class="codigo-fuente preformateado">
+    --- CSS
+    /* BEGIN --Variables globales */
+    :root {
+      --margen: 100px
+    }
+    /* END --Variables globales */
+
+    ul {
+      margin-left: var(--margen); /* ← Variable global */
+   }
+
+    --- HTML
+    &lt;ul>
+      &lt;li>...&lt;/li>
+      &lt;li>...&lt;/li>
+      &lt;li>...&lt;/li>
+    &lt;/ul>
+  </pre>
+
+  <h2>Variables en contexto definido</h2>
+  <p>Se aplicarán en los elementos hijos del elemento en el cual ha sido definido</p>
+
+  <p>En otras palabras, si se define una variable dentro de un selector de clase, el elemento HTML debe poseer esa clase para que se efectúe la sustitución del valor de dicha variable</p>
+
+  <pre class="codigo-fuente preformateado">
+    --- CSS
+    /* BEGIN --Variables en contexto definido */
+    .tool-box{
+      --rojo: rgb(255, 0, 0);
+      --verde:rgb(0, 255, 0);
+      --azul: rgb(0, 0, 255);
+      --chocolate: rgb(98, 59, 9);
+    
+      --grande: 40px;
+      --mediano: 20px;
+      --pequeno: 10px;
+    }
+    /* END --Variables en contexto definido */
+
+    /* Selectores */
+    #rojo-grande{
+      color: var(--rojo, fuchsia );
+      font-size: var(--grande)
+    }
+
+    .verde-mediano {
+      color: var(--verde,fuchsia);
+      font-size: var(--mediano);
+    
+    }
+
+    [att="azul-pequeno"]{
+      color: var(--azul,fuchsia);
+      font-size: var(--pequeno);
+    }
+
+    [att="text-chocolate"]{
+      color: var(--chocolate,fuchsia);
+    }
+
+    --- HTML
+    &lt;ul class="tool-box">
+      &lt;li id="rojo-grande">rojo-grande&lt;/li>
+      &lt;li class="verde-mediano">verde-mediano&lt;/li>
+      &lt;li att="azul-pequeno">azul-pequeno&lt;/li>
+      &lt;li att="text-chocolate">chocolate&lt;/li>
+    &lt;/ul>
+
+    &lt;ul>
+      &lt;li class="tool-box" id="rojo-grande">rojo-grande&lt;/li>
+      &lt;li class="tool-box verde-mediano">verde-mediano&lt;/li>
+      &lt;li class="tool-box" att="azul-pequeno">azul-pequeno&lt;/li>
+      &lt;li class="tool-box" att="text-chocolate">chocolate&lt;/li>
+    &lt;/ul>
+  </pre>
+
+  <h3>Aplicando la herencia de clase tool-box en &lt;ul></h3>
+  <ul class="tool-box">
+    <li id="rojo-grande">rojo-grande</li>
+    <li class="verde-mediano">verde-mediano</li>
+    <li att="azul-pequeno">azul-pequeno</li>
+    <li att="text-chocolate">chocolate</li>
+  </ul>
+
+  <h3>Aplicando la clase tool-box a cada elemento &lt;li></h3>
+  <ul>
+    <li class="tool-box" id="rojo-grande">rojo-grande</li>
+    <li class="tool-box verde-mediano">verde-mediano</li>
+    <li class="tool-box" att="azul-pequeno">azul-pequeno</li>
+    <li class="tool-box" att="text-chocolate">chocolate</li>
+  </ul>
+
+
+  <h2>Compatibilidad entre navegadores</h2>
+
+  <p>Si un navegador como p.e.: Google Chrome es capaz de interpretar variables CSS, entonces, suponiendo que establecemos una variable para el color podría ser utilizada así:</p>
+
+  <pre>
+    --- CSS
+    .paleta-color {
+      --rojo: rgb(255, 0, 0);
+    }
+    .texto-rojo {
+      color: var(--rojo, color-de-respaldo);
+    }
+  </pre>
+
+  <p>En el ejemplo anterior si por algún motivo (escribir mal el nombre de la variable: <strong>--roja</strong>) se utilizaría el <strong>color-de-respaldo</strong></p>
+
+  <p>Cuando un navegador no interpreta variables CSS la solución será incluir la misma propiedad antes de la propiedad que usa la variable.</p>
+
+  <pre>
+    --- CSS
+    .paleta-color {
+      --rojo: rgb(255, 0, 0);
+      --verde: rgb(0, 255, 0)
+    }
+    /*CASO A: sin color de respaldo */
+    .texto-rojo {
+      color: rgb(255, 0, 0);
+      color: var(--rojo);
+    }
+
+    /*CASO A: con color de respaldo */
+    .texto-verde{
+      color: rgb(0, 255, 0)
+      color: var(--verde, green)
+    }
+  </pre>
+
+  <p>Es necesario seguir utilizando el color-de-respaldo ya que si se omite y has escrto mal el nombre de la variable no se mostrará color alguno (CASO A) ya que:  </p>
+  <ol>
+    <li>El navegador leerá e interpretará la propiedad:
+      <pre>
+        color: rgb(255, 0, 0);
+      </pre>
+    </li>
+    <li>Se interpretará la propiedad:
+      <pre>
+        color : var(--roja)
+      </pre>
+      <p>Pero ya que la función <strong>var()</strong> en la propiedad ha sido interpretada pero el nombre de la variable ha sido mal escrito y no existe un color de respaldo y, además, CSS aplicará la última propiedad válida con lo cual no se mostrará adecuadamente en el navegador</p>
+    </li>
+  </ol>
+  <h2>Prefijos CSS de navegadores</h2>
+  <a href="https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=761:prefijos-css-de-navegador-chrome-firefox-iexplorer-opera-safari-webkit-moz-ms-o-ejemplos-cu01056d&catid=75&Itemid=203">Prefijos CSS de navegadores</a>
+  
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* BEGIN --Variables globales */
+:root {
+  --margen: 100px
+}
+/* END --Variables globales */
+
+ 
+/* BEGIN --Variables en contexto definido */
+.tool-box{
+  --rojo: rgb(255, 0, 0);
+  --verde:rgb(0, 255, 0);
+  --azul: rgb(0, 0, 255);
+  --chocolate: rgb(98, 59, 9);
+
+  --grande: 40px;
+  --mediano: 20px;
+  --pequeno: 10px;
+}
+/* END --Variables en contexto definido */
+
+/* Selectores */
+#rojo-grande{
+  color: var(--rojo, fuchsia );
+  font-size: var(--grande)
+}
+
+.verde-mediano {
+  color: var(--verde,fuchsia);
+  font-size: var(--mediano);
+
+}
+
+[att="azul-pequeno"]{
+  color: var(--azul,fuchsia);
+  font-size: var(--pequeno);
+}
+
+[att="text-chocolate"]{
+  color: var(--chocolate,fuchsia);
+}
+
+ul{
+   margin-left: var(--margen); /* ← Variable global */
+}
+
+.codigo-fuente{
+  --color-fondo: lightgrey
+}
+
+.preformateado{
+  background-color: var(--color-fondo);
+  padding-top: 1em;
+}
